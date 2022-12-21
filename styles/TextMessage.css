@@ -1,0 +1,54 @@
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+.TextMessage {
+    font-family: 'VT323', monospace;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* height: 80px; */
+    padding: 20px 40px;
+    font-size: 12px;
+    /* background-image: linear-gradient(to bottom, white, #f5f); */
+    background: #202124;
+    
+  
+    border: 1px solid white;
+    color:white;
+    border-radius: 10px;
+
+   
+  
+}
+
+.TextMessage_p {
+    font-size: 32px;
+  
+}
+
+.TextMessage span {
+    opacity: 0;
+}
+
+.TextMessage span.revealed {
+    opacity: 1;
+}
+
+.TextMessage_button {
+    color: white;
+    margin: 0;
+    font-size: 32px;
+    padding: 0;
+    -webkit-appearance: none;
+    background: none;
+    border: 0;
+    font-family: inherit;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+
+
+
