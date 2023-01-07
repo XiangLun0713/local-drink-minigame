@@ -7,7 +7,7 @@ class GameObject {
     this.direction = config.direction || "down";
     this.sprite = new Sprite({
       gameObject: this,
-      src: config.src || "/assets/chara.png",
+      src: config.src || "assets/chara.png",
     });
 
     this.behaviorLoop = config.behaviorLoop || [];
