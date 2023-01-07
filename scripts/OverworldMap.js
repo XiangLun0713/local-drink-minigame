@@ -103,142 +103,432 @@ window.OverworldMaps = {
         x: utils.withGrid(14),
         y: utils.withGrid(18),
       }),
-      // dev npc
-      dev: new Person({
-        isPlayerControlled: false,
-        x: utils.withGrid(3),
-        y: utils.withGrid(9),
-        src: "/assets/dev.png",
-        behaviorLoop: [{ type: "stand", direction: "left" }],
-        talking: [
-          {
-            events: [
-              {
-                type: "textMessage",
-                text: "Zzz.. Zzz.. Zzz..",
-              },
-              {
-                type: "textMessage",
-                text: "...",
-              },
-              {
-                type: "textMessage",
-                text: "[You pick up the paper from the ground...]",
-              },
-              {
-                type: "textMessage",
-                text: '["Xiang Lun, the developer of this mini-game", it written]',
-              },
-              {
-                type: "textMessage",
-                text: "...",
-              },
-              {
-                type: "textMessage",
-                text: "[It seems like he is exhausted... Let's not disturb him.]",
-              },
-            ],
-          },
-        ],
-      }),
-      // middle counter npc
-      npc1: new Person({
-        isPlayerControlled: false,
-        x: utils.withGrid(14),
-        y: utils.withGrid(10),
-        src: "assets/npc2.png",
-        behaviorLoop: [{ type: "stand", direction: "down" }],
-      }),
-      // entrance npc
-      npc2: new Person({
-        isPlayerControlled: false,
-        x: utils.withGrid(15),
-        y: utils.withGrid(14),
-        src: "assets/npc1.png",
-        behaviorLoop: [{ type: "stand", direction: "down" }],
-        talking: [
-          {
-            events: [
-              {
-                type: "textMessage",
-                text: "Welcome to My Tech Career Fair 2022 Virtual Booth!",
-                faceHero: "npc2",
-              },
-            ],
-          },
-        ],
-      }),
-      // top right npc
-      npc3: new Person({
-        isPlayerControlled: false,
-        x: utils.withGrid(24),
-        y: utils.withGrid(4),
-        src: "assets/npc2.png",
-        behaviorLoop: [{ type: "stand", direction: "left" }],
-      }),
-      // mid-left npc
-      npc4: new Person({
+      customerA: new Person({
         isPlayerControlled: false,
         x: utils.withGrid(26),
         y: utils.withGrid(9),
-        src: "assets/npc3.png",
-        behaviorLoop: [{ type: "stand", direction: "left" }],
+        src: "/assets/npc3.png",
+        behaviorLoop: [{ type: "stand", direction: "down" }],
+        talking: [
+          {
+            events: [
+              {
+                type: "textMessage",
+                text: "Player: Hello, what drink are you having?",
+                faceHero: "customerA",
+              },
+              {
+                type: "textMessage",
+                text: "Customer: I’m having Teh Tarik, the most well-known Malaysian drink. I recommend you to try it!",
+                faceHero: "customerA",
+              },
+              {
+                type: "textMessage",
+                text: "Player: What does Teh Tarik mean?",
+                faceHero: "customerA",
+              },
+              {
+                type: "textMessage",
+                text: "Customer: Teh Tarik means ‘pulled tea’ as in order to prepare this drink, the tea has to be repeatedly poured from one cup to another. This will release the heat so that it is drinkable, and most importantly, it will create a thick, frothy top.",
+                faceHero: "customerA",
+              },
+              {
+                type: "textMessage",
+                text: "Customer: As the tea is poured with increasing height, it gives the illusion of a long stream of tea being ‘pulled’ in mid-air, thus giving it its name.",
+                faceHero: "customerA",
+              },
+              {
+                type: "textMessage",
+                text: "Player: I see, that’s really interesting to know! I will give it a try!",
+                faceHero: "customerA",
+              },
+            ],
+          },
+        ],
       }),
-      // top left counter 1 npc
-      npc5: new Person({
+      customerBLeft: new Person({
         isPlayerControlled: false,
-        x: utils.withGrid(10),
-        y: utils.withGrid(3),
-        src: "assets/npc1.png",
-        behaviorLoop: [{ type: "stand", direction: "left" }],
+        x: utils.withGrid(2),
+        y: utils.withGrid(14),
+        src: "/assets/npc3.png",
+        behaviorLoop: [
+          { type: "stand", direction: "down", time: 3600 },
+          { type: "stand", direction: "right", time: 2400 },
+        ],
+        talking: [
+          {
+            events: [
+              {
+                type: "textMessage",
+                text: "Customer: This Milo Dinosaur tastes so good!",
+              },
+              {
+                type: "textMessage",
+                text: "Customer: Have you ever tried Milo Dinosaur before? It’s basically Milo Ais with an added topping of Milo powder.",
+                faceHero: "customerBLeft",
+              },
+              {
+                type: "textMessage",
+                text: "Player: Well, I have tried Milo Ais before but not Milo Dinosaur. I would like to find out if it tastes different from it…",
+                faceHero: "customerBLeft",
+              },
+            ],
+          },
+        ],
       }),
-      // top left counter 2 npc
-      npc6: new Person({
+      customerBRight: new Person({
         isPlayerControlled: false,
-        x: utils.withGrid(5),
-        y: utils.withGrid(3),
-        src: "assets/npc3.png",
-        behaviorLoop: [{ type: "stand", direction: "right" }],
+        x: utils.withGrid(3),
+        y: utils.withGrid(14),
+        src: "/assets/npc2.png",
+        behaviorLoop: [
+          { type: "stand", direction: "down", time: 4000 },
+          { type: "stand", direction: "left", time: 2200 },
+        ],
+        talking: [
+          {
+            events: [
+              {
+                type: "textMessage",
+                text: "Player: Hi, what does your drink taste like?",
+              },
+              {
+                type: "textMessage",
+                text: "Player: Hey there, Sirap Bandung is a mixture of rose syrup and condensed milk. Although it looks like strawberry milk, it tastes completely different from it. You should try it since it has a unique taste!",
+                faceHero: "customerBRight",
+              },
+              {
+                type: "textMessage",
+                text: "Player: Cool, it does look very appealing!",
+                faceHero: "customerBRight",
+              },
+            ],
+          },
+        ],
       }),
-      // mid-left counter npc
-      npc7: new Person({
-        isPlayerControlled: false,
-        x: utils.withGrid(10),
-        y: utils.withGrid(9),
-        src: "assets/npc1.png",
-        behaviorLoop: [{ type: "stand", direction: "left" }],
-      }),
-      // top mid counter 1 npc
-      npc8: new Person({
+      customerC: new Person({
         isPlayerControlled: false,
         x: utils.withGrid(16),
-        y: utils.withGrid(4),
-        src: "assets/npc1.png",
-        behaviorLoop: [{ type: "stand", direction: "down" }],
+        y: utils.withGrid(9),
+        src: "/assets/npc3.png",
+        behaviorLoop: [
+          { type: "stand", direction: "down", time: 2400 },
+          { type: "stand", direction: "left", time: 1200 },
+          { type: "stand", direction: "down", time: 2400 },
+          { type: "stand", direction: "right", time: 1200 },
+        ],
+        talking: [
+          {
+            events: [
+              {
+                type: "textMessage",
+                text: "Customer: Hmm, I wonder if Cincau is available today?",
+              },
+              {
+                type: "textMessage",
+                text: "Player: Hello, Cincau is the grass jelly, right?",
+              },
+              {
+                type: "textMessage",
+                text: "Customer: Hey, yes, that’s right. It is a sweet dessert made of a type of plant called Mesona Chinensis which belongs to the mint family.",
+                faceHero: "customerC",
+              },
+              {
+                type: "textMessage",
+                text: "Player: Wow, I didn’t know that. How is it made into a jelly then?",
+                faceHero: "customerC",
+              },
+              {
+                type: "textMessage",
+                text: "Customer: The leaves and stalks of this plant are dried and boiled with a small amount of starch or rice flour. After cooling down, the liquid will firm into a jelly-like consistency.",
+                faceHero: "customerC",
+              },
+              {
+                type: "textMessage",
+                text: "Player: That’s amazing! Is it a common food in Malaysia?",
+                faceHero: "customerC",
+              },
+              {
+                type: "textMessage",
+                text: "Customer: Of course, although it originated from Hong Kong, Taiwan, and Southern China, it is often used as a topping for Malaysian desserts, or added to other beverages such as soy milk, iced teh tarik, and sirap bandung. Alternatively, it can be served on its own with some sugar syrup, as ‘iced cincau’. You can even find cincau drinks sold in cans in a vending machine.",
+                faceHero: "customerC",
+              },
+              {
+                type: "textMessage",
+                text: "Player: It sounds like a must-try drink! Thanks :)",
+                faceHero: "customerC",
+              },
+              {
+                type: "textMessage",
+                text: "Customer: The leaves and stalks of this plant are dried and boiled with a small amount of starch or rice flour. After cooling down, the liquid will firm into a jelly-like consistency.",
+                faceHero: "customerC",
+              },
+            ],
+          },
+        ],
       }),
-      // top mid counter 2 npc
-      npc9: new Person({
+      customerD: new Person({
         isPlayerControlled: false,
-        x: utils.withGrid(14),
-        y: utils.withGrid(4),
-        src: "assets/npc2.png",
-        behaviorLoop: [{ type: "stand", direction: "down" }],
-      }),
-      // bottom-left counter npc
-      npc10: new Person({
-        isPlayerControlled: false,
-        x: utils.withGrid(7),
+        x: utils.withGrid(25),
         y: utils.withGrid(14),
-        src: "assets/npc3.png",
+        src: "/assets/npc2.png",
+        behaviorLoop: [{ type: "stand", direction: "down" }],
+        talking: [
+          {
+            events: [
+              {
+                type: "textMessage",
+                text: "Player: Hello, what drink are you having?",
+              },
+              {
+                type: "textMessage",
+                text: "Customer: I’m having ‘Air Mata Kucing’",
+                faceHero: "customerD",
+              },
+              {
+                type: "textMessage",
+                text: "Player: ‘Air Mata Kucing’? What could that mean as a drink?",
+                faceHero: "customerD",
+              },
+              {
+                type: "textMessage",
+                text: "Customer: Haha, please do not think of images of cat eyes floating in the brown liquid. It is made up of monk fruit which is also known as “Lo Hon Guo'' in Chinese.",
+                faceHero: "customerD",
+              },
+              {
+                type: "textMessage",
+                text: "Customer:  The abundant benefits of monk fruit are widely known in the world of traditional Chinese medicine.",
+                faceHero: "customerD",
+              },
+              {
+                type: "textMessage",
+                text: "Player: What are the health benefits?",
+                faceHero: "customerD",
+              },
+              {
+                type: "textMessage",
+                text: "Customer: Researchers claim that the fruit can help relieve depression, prevent cell damage, and act as an anti-ageing agent. This drink can be usually found at Petaling Street and night markets so I am surprised to see it being sold here.",
+                faceHero: "customerD",
+              },
+              {
+                type: "textMessage",
+                text: "Customer: Moreover, Air Mata Kucing was also ranked #6 out of the “50 Most Delicious Drinks from Around the World” by CNN.",
+                faceHero: "customerD",
+              },
+              {
+                type: "textMessage",
+                text: "Player: Impressive! I wish I could try all the drinks here.",
+                faceHero: "customerD",
+              },
+            ],
+          },
+        ],
+      }),
+      employeeE: new Person({
+        isPlayerControlled: false,
+        x: utils.withGrid(4),
+        y: utils.withGrid(7),
+        src: "/assets/npc1.png",
+        behaviorLoop: [
+          { type: "stand", direction: "down", time: 3600 },
+          { type: "stand", direction: "left", time: 800 },
+          { type: "stand", direction: "down", time: 3600 },
+          { type: "stand", direction: "right", time: 800 },
+        ],
+        talking: [
+          {
+            events: [
+              {
+                type: "textMessage",
+                text: "Employee: What drink would you want to order?",
+                faceHero: "employeeE",
+              },
+              {
+                type: "textMessage",
+                text: "Player: What is the difference between Teh O and Teh?",
+                faceHero: "employeeE",
+              },
+              {
+                type: "textMessage",
+                text: "Employee: Teh O is tea without any milk hence the O in its name that symbolizes zero meanwhile Teh is milk tea.",
+                faceHero: "employeeE",
+              },
+              {
+                type: "textMessage",
+                text: "Player: Wow, that's interesting. Is it the same case with Kopi O?",
+                faceHero: "employeeE",
+              },
+              {
+                type: "textMessage",
+                text: "Employee: Yup, now you know what the O in Malaysian drinks mean.",
+                faceHero: "employeeE",
+              },
+              {
+                type: "textMessage",
+                text: "Player: That’s helpful. Next time I will not make a mistake while ordering local drinks.",
+                faceHero: "employeeE",
+              },
+            ],
+          },
+        ],
+      }),
+      employeeH: new Person({
+        isPlayerControlled: false,
+        x: utils.withGrid(3),
+        y: utils.withGrid(5),
+        src: "/assets/npc1.png",
+        behaviorLoop: [
+          { type: "stand", direction: "down", time: 3600 },
+          { type: "walk", direction: "right" },
+          { type: "walk", direction: "right" },
+          { type: "stand", direction: "down", time: 2400 },
+          { type: "walk", direction: "left" },
+          { type: "walk", direction: "left" },
+        ],
+        talking: [
+          {
+            events: [
+              {
+                type: "textMessage",
+                text: "Player: Just asking, did Malaysia have any alcoholic local drinks?",
+              },
+              {
+                type: "textMessage",
+                text: "Employee: We do actually. Even though Malaysia is a muslim country, we have a variety of races and ethnicities that have their own culture.",
+                faceHero: "employeeH",
+              },
+              {
+                type: "textMessage",
+                text: "Player: Great, can you tell me more about it?",
+                faceHero: "employeeH",
+              },
+              {
+                type: "textMessage",
+                text: "Employee: Sure. For example, we have a drink called ‘Tuak’ which was invented by some of the native tribes in Sarawak on the island of Borneo.",
+                faceHero: "employeeH",
+              },
+              {
+                type: "textMessage",
+                text: "Player: What is a 'Tuak'",
+                faceHero: "employeeH",
+              },
+              {
+                type: "textMessage",
+                text: "Employee: ‘Tuak’ is a rice wine that is made of four basic ingredients, which is cooked glutinous rice, ragi(a traditional starter base containing bacterial enzymes and yeast), water and sugar which is optional. Some ‘Tuak’ also may include honey to give it a mead-like flavor.",
+                faceHero: "employeeH",
+              },
+              {
+                type: "textMessage",
+                text: "Player: Cheers.",
+                faceHero: "employeeH",
+              },
+            ],
+          },
+        ],
+      }),
+      employeeG: new Person({
+        isPlayerControlled: false,
+        x: utils.withGrid(15),
+        y: utils.withGrid(5),
+        src: "/assets/npc1.png",
+        behaviorLoop: [
+          { type: "stand", direction: "down", time: 1200 },
+          { type: "walk", direction: "left" },
+          { type: "walk", direction: "left" },
+          { type: "walk", direction: "left" },
+          { type: "walk", direction: "left" },
+          { type: "walk", direction: "left" },
+          { type: "walk", direction: "left" },
+          { type: "stand", direction: "down", time: 6000 },
+          { type: "walk", direction: "right" },
+          { type: "walk", direction: "right" },
+          { type: "walk", direction: "right" },
+          { type: "walk", direction: "right" },
+          { type: "walk", direction: "right" },
+          { type: "walk", direction: "right" },
+        ],
+        talking: [
+          {
+            events: [
+              {
+                type: "textMessage",
+                text: "Player: Did Malaysia have any caffeinated local drinks like coffee? I need something to juice up my day.",
+              },
+              {
+                type: "textMessage",
+                text: "Employee: We do actually have white coffee.",
+                faceHero: "employeeG",
+              },
+              {
+                type: "textMessage",
+                text: "Player: Wow, is that like a latte or something?",
+                faceHero: "employeeG",
+              },
+              {
+                type: "textMessage",
+                text: "Employee: No, it’s different. The word ‘white’ in white coffee means unadulterated or pure. This refers to the brewing process, in which the coffee beans are brewed without any added substances or ingredients.",
+                faceHero: "employeeG",
+              },
+              {
+                type: "textMessage",
+                text: "Employee: While other types of coffee are roasted with sugars, margarine and wheat, white coffee is only roasted with margarine only giving the coffee a lighter color.",
+                faceHero: "employeeG",
+              },
+              {
+                type: "textMessage",
+                text: "Player: Gimme some so I can get through this Monday blues.",
+                faceHero: "employeeG",
+              },
+            ],
+          },
+        ],
+      }),
+      employeeF: new Person({
+        isPlayerControlled: false,
+        x: utils.withGrid(17),
+        y: utils.withGrid(4),
+        src: "/assets/npc1.png",
         behaviorLoop: [{ type: "stand", direction: "right" }],
-      }),
-      // bottom-right counter npc
-      npc11: new Person({
-        isPlayerControlled: false,
-        x: utils.withGrid(22),
-        y: utils.withGrid(14),
-        src: "assets/npc1.png",
-        behaviorLoop: [{ type: "stand", direction: "left" }],
+        talking: [
+          {
+            events: [
+              {
+                type: "textMessage",
+                text: "Player: What drinks are you making?",
+              },
+              {
+                type: "textMessage",
+                text: "Employee: I'm currently making barley juice.",
+                faceHero: "employeeF",
+              },
+              {
+                type: "textMessage",
+                text: "Player: Barley juice? Who would have thought that barley could be served as a juice?",
+                faceHero: "employeeF",
+              },
+              {
+                type: "textMessage",
+                text: "Employee: Well if you could make stout out of it, why not make a juice too? but this barley drink didn't taste anything like its alcoholic counterpart. It is sweet, slightly thick and comes with soft barley pearls and can be served warm or cold, plain or with lime.",
+                faceHero: "employeeF",
+              },
+              {
+                type: "textMessage",
+                text: "Player: Does it have any benefits?",
+                faceHero: "employeeF",
+              },
+              {
+                type: "textMessage",
+                text: "Employee: It is thought to have a cooling effect on the body and is often used as a home remedy for fever. Also, drinking barley water on a regular basis can help promote weight loss, and lower cholesterol and blood sugar levels.",
+                faceHero: "employeeF",
+              },
+              {
+                type: "textMessage",
+                text: "Player: Cool (Pun intended), I would definitely try it in the future.",
+                faceHero: "employeeF",
+              },
+            ],
+          },
+        ],
       }),
     },
     walls: {
@@ -359,26 +649,9 @@ window.OverworldMaps = {
       [utils.asGridCoords(28, 3)]: true,
       [utils.asGridCoords(0, 4)]: true,
       [utils.asGridCoords(18, 4)]: true,
-      [utils.asGridCoords(22, 4)]: true,
       [utils.asGridCoords(23, 4)]: true,
-      [utils.asGridCoords(24, 4)]: true,
       [utils.asGridCoords(28, 4)]: true,
       [utils.asGridCoords(0, 5)]: true,
-      [utils.asGridCoords(2, 5)]: true,
-      [utils.asGridCoords(3, 5)]: true,
-      [utils.asGridCoords(4, 5)]: true,
-      [utils.asGridCoords(5, 5)]: true,
-      [utils.asGridCoords(7, 5)]: true,
-      [utils.asGridCoords(8, 5)]: true,
-      [utils.asGridCoords(9, 5)]: true,
-      [utils.asGridCoords(10, 5)]: true,
-      [utils.asGridCoords(11, 5)]: true,
-      [utils.asGridCoords(12, 5)]: true,
-      [utils.asGridCoords(13, 5)]: true,
-      [utils.asGridCoords(14, 5)]: true,
-      [utils.asGridCoords(15, 5)]: true,
-      [utils.asGridCoords(16, 5)]: true,
-      [utils.asGridCoords(17, 5)]: true,
       [utils.asGridCoords(18, 5)]: true,
       [utils.asGridCoords(22, 5)]: true,
       [utils.asGridCoords(23, 5)]: true,
@@ -426,21 +699,7 @@ window.OverworldMaps = {
       [utils.asGridCoords(26, 8)]: true,
       [utils.asGridCoords(28, 8)]: true,
       [utils.asGridCoords(0, 9)]: true,
-      [utils.asGridCoords(2, 9)]: true,
-      [utils.asGridCoords(3, 9)]: true,
-      [utils.asGridCoords(7, 9)]: true,
-      [utils.asGridCoords(8, 9)]: true,
-      [utils.asGridCoords(9, 9)]: true,
-      [utils.asGridCoords(10, 9)]: true,
-      [utils.asGridCoords(11, 9)]: true,
-      [utils.asGridCoords(12, 9)]: true,
       [utils.asGridCoords(16, 9)]: true,
-      [utils.asGridCoords(17, 9)]: true,
-      [utils.asGridCoords(18, 9)]: true,
-      [utils.asGridCoords(19, 9)]: true,
-      [utils.asGridCoords(20, 9)]: true,
-      [utils.asGridCoords(21, 9)]: true,
-      [utils.asGridCoords(25, 9)]: true,
       [utils.asGridCoords(26, 9)]: true,
       [utils.asGridCoords(28, 9)]: true,
       [utils.asGridCoords(0, 10)]: true,
@@ -483,7 +742,6 @@ window.OverworldMaps = {
       [utils.asGridCoords(2, 14)]: true,
       [utils.asGridCoords(3, 14)]: true,
       [utils.asGridCoords(25, 14)]: true,
-      [utils.asGridCoords(26, 14)]: true,
       [utils.asGridCoords(28, 14)]: true,
       [utils.asGridCoords(0, 15)]: true,
       [utils.asGridCoords(2, 15)]: true,
@@ -529,407 +787,13 @@ window.OverworldMaps = {
       [utils.asGridCoords(26, 18)]: true,
       [utils.asGridCoords(27, 18)]: true,
       [utils.asGridCoords(28, 18)]: true,
-      [utils.asGridCoords(8, 13)]: true,
-      [utils.asGridCoords(11, 13)]: true,
-      [utils.asGridCoords(17, 13)]: true,
-      [utils.asGridCoords(20, 13)]: true,
       [utils.asGridCoords(8, 14)]: true,
       [utils.asGridCoords(11, 14)]: true,
       [utils.asGridCoords(17, 14)]: true,
       [utils.asGridCoords(20, 14)]: true,
-      [utils.asGridCoords(8, 15)]: true,
-      [utils.asGridCoords(11, 15)]: true,
-      [utils.asGridCoords(17, 15)]: true,
-      [utils.asGridCoords(20, 15)]: true,
       [utils.asGridCoords(13, 19)]: true,
       [utils.asGridCoords(14, 19)]: true,
       [utils.asGridCoords(15, 19)]: true,
-    },
-    cutsceneSpaces: {
-      [utils.asGridCoords(14, 12)]: [
-        {
-          events: [
-            // middle counter event
-            {
-              who: "hero",
-              type: "stand",
-              direction: "up",
-            },
-            {
-              type: "textMessage",
-              text: "Welcome to the first-floor of this virtual event!",
-            },
-            {
-              type: "textMessage",
-              text: "Here consists of the virtual booths for our Gold & BIK collaborators.",
-            },
-            {
-              type: "textMessage",
-              text: "You can go to the second floor through the elevator at the top right side of the map.",
-            },
-            {
-              type: "textMessage",
-              text: "There you will find the virtual booths of our Diamond & Platinum collaborators.",
-            },
-            {
-              type: "textMessage",
-              text: "Have fun!",
-            },
-          ],
-        },
-      ],
-      [utils.asGridCoords(9, 14)]: [
-        {
-          events: [
-            // Global intelligence event
-            {
-              who: "hero",
-              type: "stand",
-              direction: "left",
-            },
-            {
-              type: "textMessage",
-              text: "Hi! Welcome to the Global Intelligence Virtual Booth!",
-            },
-            {
-              type: "textMessage",
-              text: "Global Intelligence is the Technology Centre in Malaysia for GlobalVision Systems, Inc. (USA).",
-            },
-            {
-              type: "textMessage",
-              text: "GlobalVision Systems is the leading provider of the most advanced and comprehensive regulatory compliance, risk management, anti-money laundering and anti-fraud solutions for financial institutions.",
-            },
-            {
-              type: "textMessage",
-              text: "We are located in Menara Kembar Bank Rakyat building (Brickfields area), which is within a walking distance from KL Sentral LRT station.",
-            },
-            {
-              type: "textMessage",
-              text: "Please contact us for any info on our job opportunities via career@gv-systems.com or 03-2260 7655.",
-            },
-          ],
-        },
-      ],
-      [utils.asGridCoords(20, 14)]: [
-        {
-          events: [
-            // Deloitte event
-            {
-              who: "hero",
-              type: "stand",
-              direction: "right",
-            },
-            {
-              type: "textMessage",
-              text: "Hi! Welcome to the Deloitte Virtual Booth!",
-            },
-            {
-              type: "textMessage",
-              text: "Deloitte is the world’s leading professional services network with USD50.2 billion in revenue and over 345,000 professionals spanning more than 150 countries.",
-            },
-            {
-              type: "textMessage",
-              text: "A leading global provider of audit and assurance, consulting, financial advisory, risk advisory, tax, and related services, Deloitte currently serves four out of five Fortune Global 500® companies.",
-            },
-            {
-              type: "textMessage",
-              text: "Our shared culture and mission — to make an impact that matters — is evident not only in our work for clients, but also in our global WorldClass ambition, WorldClimate initiative, and our ALL IN diversity and inclusion strategy.",
-            },
-            {
-              type: "textMessage",
-              text: "Deloitte Malaysia is a member of the Deloitte Southeast Asia network, which comprises over 380 partners and 10,000 professionals in 25 office locations all over the region.",
-            },
-            {
-              type: "textMessage",
-              text: "We are supported by a vibrant and dynamic workforce of more than 2,400 employees and partners operating from 8 locations nationwide.",
-            },
-            {
-              type: "textMessage",
-              text: "From international assignments, secondment to overseas branches, and participating in Life At Deloitte, Sports Club and corporate social responsibility activities, at Deloitte you can define who you are and how you want your career to be.",
-            },
-            {
-              type: "textMessage",
-              text: "Please contact us for any info on our job opportunities via myhrum@deloitte.com.",
-            },
-          ],
-        },
-      ],
-      [utils.asGridCoords(14, 6)]: [
-        {
-          events: [
-            // AEXIS Technology event
-            {
-              who: "hero",
-              type: "stand",
-              direction: "up",
-            },
-            {
-              type: "textMessage",
-              text: "Hi! Welcome to the AEXIS Technology Virtual Booth!",
-            },
-            {
-              type: "textMessage",
-              text: "Aexis Technologies Sdn. Bhd. was incorporated in Malaysia on 27th July 2004.",
-            },
-            {
-              type: "textMessage",
-              text: "Our business activities involve around Information, Communication and Technology (ICT) pillars.",
-            },
-            {
-              type: "textMessage",
-              text: "We provide system integration services that support the growing demand of the current and future business environment.",
-            },
-            {
-              type: "textMessage",
-              text: "Aexis’ expertise lies in the experienced management and technical team coupled with solid understanding of the ICT environment.",
-            },
-            {
-              type: "textMessage",
-              text: "Geared to succeed, we will ensure our client’s success is our main reason of existence.",
-            },
-            {
-              type: "textMessage",
-              text: "Founded by highly experienced personnel from various backgrounds, Aexis is committed to deliver its promises.",
-            },
-            {
-              type: "textMessage",
-              text: "Our excellent team of technology experts will further take your organisation to greater heights.",
-            },
-            {
-              type: "textMessage",
-              text: "Our proven principal relationship will further enhance the cost effectiveness of your project requirements.",
-            },
-            {
-              type: "textMessage",
-              text: "Aexis offers you the technology that is current, required, and realizes your vision into success.",
-            },
-            {
-              type: "textMessage",
-              text: "We excel in advisory, managed services, secured environment and architect your solution to construct your desired technology requirements.",
-            },
-            {
-              type: "textMessage",
-              text: "Please contact us for any info on our job opportunities via hr@aexis.com.my or +603-7831 9082",
-            },
-          ],
-        },
-      ],
-      [utils.asGridCoords(16, 6)]: [
-        {
-          events: [
-            // RefineNetworks event
-            {
-              who: "hero",
-              type: "stand",
-              direction: "up",
-            },
-            {
-              type: "textMessage",
-              text: "Hi! Welcome to the RefineNetworks Virtual Booth!",
-            },
-            {
-              type: "textMessage",
-              text: "RefineNetworks was founded in 2008, throughout the years, we have number of successful implementations and we constantly embarked into emerging market.",
-            },
-            {
-              type: "textMessage",
-              text: "We constantly evolved with new skillset to being outstanding.",
-            },
-            {
-              type: "textMessage",
-              text: "Please contact us for any info on our job opportunities via recruit@refinenetworks.com.",
-            },
-          ],
-        },
-      ],
-      [utils.asGridCoords(8, 9)]: [
-        {
-          events: [
-            // Wistron event
-            {
-              who: "hero",
-              type: "stand",
-              direction: "right",
-            },
-            {
-              type: "textMessage",
-              text: "Hi! Welcome to the Wistron Virtual Booth!",
-            },
-            {
-              type: "textMessage",
-              text: "Wistron is a global leader providing state-of-the-art design, manufacturing, services, and systems for information and communication products to top branded companies worldwide.",
-            },
-            {
-              type: "textMessage",
-              text: "As one of the top 3 global makers of technology products, Wistron adapts cutting edge i4.0 technology and solution to its digitized smart manufacturing facility with automated production lines.",
-            },
-            {
-              type: "textMessage",
-              text: "Wistron is devoted to increasing the value of our services through non-stop development of innovative solutions in the areas of green recycling, cloud systems and services, and display vertical integration.",
-            },
-            {
-              type: "textMessage",
-              text: "Wistron is a Fortune Global 500 company with annual revenue exceeding US$29 billion and over 80,000 employees in over 10 manufacturing sites around the world.",
-            },
-            {
-              type: "textMessage",
-              text: "Wistron welcomes employees who are passionate about work, adaptable in a fast-paced environment and have a dynamic mindset to work with global colleagues surrounded by tomorrow’s technology!",
-            },
-            {
-              type: "textMessage",
-              text: "Please contact us for any info on our job opportunities via WMY_Recruitment@wistron.com or +603-31622888",
-            },
-          ],
-        },
-      ],
-      [utils.asGridCoords(24, 9)]: [
-        {
-          events: [
-            // Operion event
-            {
-              who: "hero",
-              type: "stand",
-              direction: "right",
-            },
-            {
-              type: "textMessage",
-              text: "Hi! Welcome to the Operion Virtual Booth!",
-            },
-            {
-              type: "textMessage",
-              text: "Operion Ecommerce & Software Sdn Bhd specialist in customisation software and mobile app development since 2014.",
-            },
-            {
-              type: "textMessage",
-              text: "We serve client worldwide regardless border, as long as there is a demand. Through out the years, we design a lot of custom made software to fulfil client needs.",
-            },
-            {
-              type: "textMessage",
-              text: "Besides, with our company 15 years experience in hiring internship and also fresh graduate, we train the interns to hold the skill set that able to improve themselves before they graduated and going into real workplace.",
-            },
-            {
-              type: "textMessage",
-              text: "1 company 1 technoprenuer is our vision to grow MALAYSIA economic through the use of technology.",
-            },
-            {
-              type: "textMessage",
-              text: "Please contact us for any info on our job opportunities via career@operion.com.my",
-            },
-          ],
-        },
-      ],
-      [utils.asGridCoords(22, 4)]: [
-        {
-          events: [
-            // Zetpy event
-            {
-              who: "hero",
-              type: "stand",
-              direction: "right",
-            },
-            {
-              type: "textMessage",
-              text: "Hi! Welcome to the Zetpy Virtual Booth!",
-            },
-            {
-              type: "textMessage",
-              text: "Zetpy.com, is a data technology platform built by zetpians with the goal to enable sellers, merchants and brands across South-East Asia to sell successfully locally, via online and offline channels (Omni-channel), and utilize the data insights to scale up their revenue, growth and customer’s loyalty.",
-            },
-            {
-              type: "textMessage",
-              text: "Our mission is simple, we want to help local sellers to sell successfully, locally.",
-            },
-            {
-              type: "textMessage",
-              text: "We are #ObsessedOverCustomers and We want to empower merchants to make better business decisions via Data and AI.",
-            },
-            {
-              type: "textMessage",
-              text: "Our vision is to be the #1 Omnichannel Data Tech Platform for Merchants in SouthEast Asia (SEA) ",
-            },
-            {
-              type: "textMessage",
-              text: "We help South East Asia (SEA) Merchants to sell successfully online and offline (Omnichannel), to grow their business via Automation, Sync, Data and Financing and to make Better business decisions via Data.",
-            },
-            {
-              type: "textMessage",
-              text: "Please contact us for any info on our job opportunities via talent@zetpy.com or +6010-290 0930",
-            },
-          ],
-        },
-      ],
-      [utils.asGridCoords(7, 3)]: [
-        {
-          events: [
-            // Devance Academy event
-            {
-              who: "hero",
-              type: "stand",
-              direction: "left",
-            },
-            {
-              type: "textMessage",
-              text: "Hi! Welcome to the Devance Academy Virtual Booth!",
-            },
-            {
-              type: "textMessage",
-              text: "Devance Academy was founded in 2020 and we are a community-centric academy that partners with employers to co-create upskilling and placement programs for digital talents.",
-            },
-            {
-              type: "textMessage",
-              text: "Our mission is to empower local talents to be gainfully employed while helping them develop world-class technology skill sets to compete globally.",
-            },
-            {
-              type: "textMessage",
-              text: "Our flagship program: Programmer Study Group, is a 1-month coaching program focused on upskilling CS/IT fresh graduates and preparing them for junior programmer roles in tech companies. In the past, we’ve organized programs for Digital Product Designer, WordPress and Blockchain Developer.",
-            },
-            {
-              type: "textMessage",
-              text: "We are dedicated to growing a community of digital talents throughout ASEAN, we believe in helping digital talents to uplift each other in the tech ecosystem and to compete globally.",
-            },
-            {
-              type: "textMessage",
-              text: "We are actively engaging and building the digital talents community via activities like peer coaching community for CTOs and Tech leads, hackathons, developers networking events and coding workshops.",
-            },
-            {
-              type: "textMessage",
-              text: "Please contact us for any info on our job opportunities via hello@devance.academy or +6011-54019188",
-            },
-          ],
-        },
-      ],
-      [utils.asGridCoords(8, 3)]: [
-        {
-          events: [
-            // Printcious event
-            {
-              who: "hero",
-              type: "stand",
-              direction: "right",
-            },
-            {
-              type: "textMessage",
-              text: "Hi! Welcome to the Printcious Virtual Booth!",
-            },
-            {
-              type: "textMessage",
-              text: "Printcious is an e-commerce website specialising in personalised gifts in which anybody can design their own gifts with our easy-to-use online design tools and get a unique gift for themselves and their loved ones.",
-            },
-            {
-              type: "textMessage",
-              text: "It's not just about a gift but, it is the gift that was made right from the bottom of their heart with a personal and DIY touch to it.",
-            },
-            {
-              type: "textMessage",
-              text: "Our personalised products include t-shirts, canvases, mugs, cushions, puzzles and many more. Enjoy customising your gifts with us.",
-            },
-            {
-              type: "textMessage",
-              text: "Please contact us for any info on our job opportunities via henry@printcious.com.",
-            },
-          ],
-        },
-      ],
     },
   },
 };
