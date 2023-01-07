@@ -5,6 +5,7 @@
     }
 
     .instruction {
+      margin-top: -30;
       text-align: center;
       color: white;
       font-family: "VT323", monospace;
@@ -12,26 +13,12 @@
     }
   </style>
   <head>
-    <title>Explore</title>
+    <title>Local Drinkie</title>
     <link rel="stylesheet" href="/styles/game-styles.css" type="text/css" />
     <link rel="stylesheet" href="/styles/TextMessage.css" type="text/css" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/favicon/favicon-16x16.png"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo.png" />
     <script type="text/javascript">
       function checkView() {
         if (
@@ -42,7 +29,9 @@
             navigator.userAgent.substr(0, 4)
           )
         )
-          alert("Please use a computer and view this webpage in full-screen for a better user experience.");
+          alert(
+            "Please use a computer and view this webpage in full-screen for a better user experience."
+          );
       }
     </script>
   </head>
@@ -58,17 +47,17 @@
     <div class="controller"></div>
 
     <!--Scripts-->
-    <script src="/game/utils.js"></script>
-    <script src="/game/DirectionInput.js"></script>
-    <script src="/game/Overworld.js"></script>
-    <script src="/game/Gameobject.js"></script>
-    <script src="/game/Person.js"></script>
-    <script src="/game/Sprite.js"></script>
-    <script src="/game/OverworldMap.js"></script>
-    <script src="/game/OverworldEvent.js"></script>
-    <script src="/game/TextMessage.js"></script>
-    <script src="/game/KeyPressListener.js"></script>
-    <script src="/game/RevealingText.js"></script>
-    <script src="/game/init.js"></script>
+    <script src="/scripts/utils.js"></script>
+    <script src="/scripts/DirectionInput.js"></script>
+    <script src="/scripts/Overworld.js"></script>
+    <script src="/scripts/Gameobject.js"></script>
+    <script src="/scripts/Person.js"></script>
+    <script src="/scripts/Sprite.js"></script>
+    <script src="/scripts/OverworldMap.js"></script>
+    <script src="/scripts/OverworldEvent.js"></script>
+    <script src="/scripts/TextMessage.js"></script>
+    <script src="/scripts/KeyPressListener.js"></script>
+    <script src="/scripts/RevealingText.js"></script>
+    <script src="/scripts/init.js"></script>
   </body>
 </html>

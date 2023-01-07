@@ -28,7 +28,7 @@ class GameObject {
   update() {}
 
   async doBehaviorEvent(map) {
-    //Don't do anything if there is a more important cutscene or I don't have config to do anything
+    //Don't do anything if there is a more important cut scene or I don't have config to do anything
     //anyway.
     if (
       map.isCutscenePlaying ||
