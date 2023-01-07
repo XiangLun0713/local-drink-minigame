@@ -95,8 +95,8 @@ class OverworldMap {
 //Objects of all the maps in game
 window.OverworldMaps = {
   firstFloor: {
-    lowerSrc: "/assets/map.png",
-    upperSrc: "/assets/mapUpper.png",
+    lowerSrc: "assets/map.png",
+    upperSrc: "assets/mapUpper.png",
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
@@ -150,7 +150,7 @@ window.OverworldMaps = {
         isPlayerControlled: false,
         x: utils.withGrid(2),
         y: utils.withGrid(14),
-        src: "/assets/npc3.png",
+        src: "assets/npc3.png",
         behaviorLoop: [
           { type: "stand", direction: "down", time: 3600 },
           { type: "stand", direction: "right", time: 2400 },
@@ -180,7 +180,7 @@ window.OverworldMaps = {
         isPlayerControlled: false,
         x: utils.withGrid(3),
         y: utils.withGrid(14),
-        src: "/assets/npc2.png",
+        src: "assets/npc2.png",
         behaviorLoop: [
           { type: "stand", direction: "down", time: 4000 },
           { type: "stand", direction: "left", time: 2200 },
@@ -210,7 +210,7 @@ window.OverworldMaps = {
         isPlayerControlled: false,
         x: utils.withGrid(16),
         y: utils.withGrid(9),
-        src: "/assets/npc3.png",
+        src: "assets/npc3.png",
         behaviorLoop: [
           { type: "stand", direction: "down", time: 2400 },
           { type: "stand", direction: "left", time: 1200 },
@@ -271,7 +271,7 @@ window.OverworldMaps = {
         isPlayerControlled: false,
         x: utils.withGrid(25),
         y: utils.withGrid(14),
-        src: "/assets/npc2.png",
+        src: "assets/npc2.png",
         behaviorLoop: [{ type: "stand", direction: "down" }],
         talking: [
           {
@@ -328,7 +328,7 @@ window.OverworldMaps = {
         isPlayerControlled: false,
         x: utils.withGrid(4),
         y: utils.withGrid(7),
-        src: "/assets/npc1.png",
+        src: "assets/npc1.png",
         behaviorLoop: [
           { type: "stand", direction: "down", time: 3600 },
           { type: "stand", direction: "left", time: 800 },
@@ -376,7 +376,7 @@ window.OverworldMaps = {
         isPlayerControlled: false,
         x: utils.withGrid(3),
         y: utils.withGrid(5),
-        src: "/assets/npc1.png",
+        src: "assets/npc1.png",
         behaviorLoop: [
           { type: "stand", direction: "down", time: 3600 },
           { type: "walk", direction: "right" },
@@ -430,7 +430,7 @@ window.OverworldMaps = {
         isPlayerControlled: false,
         x: utils.withGrid(15),
         y: utils.withGrid(5),
-        src: "/assets/npc1.png",
+        src: "assets/npc1.png",
         behaviorLoop: [
           { type: "stand", direction: "down", time: 1200 },
           { type: "walk", direction: "left" },
@@ -487,7 +487,7 @@ window.OverworldMaps = {
         isPlayerControlled: false,
         x: utils.withGrid(17),
         y: utils.withGrid(4),
-        src: "/assets/npc1.png",
+        src: "assets/npc1.png",
         behaviorLoop: [{ type: "stand", direction: "right" }],
         talking: [
           {
