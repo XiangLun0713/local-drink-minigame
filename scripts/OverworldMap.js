@@ -107,7 +107,7 @@ window.OverworldMaps = {
         isPlayerControlled: false,
         x: utils.withGrid(26),
         y: utils.withGrid(9),
-        src: "/assets/npc3.png",
+        src: "assets/npc3.png",
         behaviorLoop: [{ type: "stand", direction: "down" }],
         talking: [
           {
