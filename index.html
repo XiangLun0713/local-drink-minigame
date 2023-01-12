@@ -1,21 +1,9 @@
 <html>
-  <style>
-    body {
-      background-color: black;
-    }
-
-    .instruction {
-      margin-top: -30;
-      text-align: center;
-      color: white;
-      font-family: "VT323", monospace;
-      font-size: 23;
-    }
-  </style>
   <head>
     <title>Local Drinkie</title>
     <link rel="stylesheet" href="styles/game-styles.css" type="text/css" />
     <link rel="stylesheet" href="styles/TextMessage.css" type="text/css" />
+    <link rel="stylesheet" href="styles/modal.css" type="text/css" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/logo.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/logo.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/logo.png" />
@@ -39,15 +27,39 @@
     <div class="game-container">
       <canvas class="game-canvas" width="1020px" height="576px"></canvas>
     </div>
-    <div class="instruction">
-      <p>Arrow keys or WASD to move</p>
-      <p>Enter key to interact</p>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h1>Welcome to the Local Drinkie Website!</h1>
+        </div>
+        <div class="modal-body">
+          <h3>Website Introduction:</h3>
+          <p>
+            Local Drinkie is a minigame website that introduces local drinks
+            from Malaysia to players. The game is set in a coffee shop themed
+            map, where you can controls a character to interact with the NPCs
+            and learn more about local drinks!
+          </p>
+          <h3>How to play:</h3>
+          <p>
+            Use WASD or arrow keys to control the character to move around the
+            coffee shop. To interact with an NPC, you simply needs to walk up to
+            them and press the "enter" button on your keyboard.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <h3>Enjoy and have fun!</h3>
+        </div>
+      </div>
     </div>
-
     <div class="controller"></div>
 
     <!--Scripts-->
     <script src="scripts/utils.js"></script>
+    <script src="scripts/TriggerModal.js"></script>
     <script src="scripts/DirectionInput.js"></script>
     <script src="scripts/Overworld.js"></script>
     <script src="scripts/Gameobject.js"></script>
