@@ -129,7 +129,12 @@ window.OverworldMaps = {
               },
               {
                 type: "textMessage",
-                text: "Customer: Teh Tarik means ‘pulled tea’ as in order to prepare this drink, the tea has to be repeatedly poured from one cup to another. This will release the heat so that it is drinkable, and most importantly, it will create a thick, frothy top.",
+                text: "Customer: Teh Tarik means ‘pulled tea’ as in order to prepare this drink, the tea has to be repeatedly poured from one cup to another.",
+                faceHero: "customerA",
+              },
+              {
+                type: "textMessage",
+                text: "Customer: This will release the heat so that it is drinkable, and most importantly, it will create a thick, frothy top.",
                 faceHero: "customerA",
               },
               {
@@ -194,7 +199,17 @@ window.OverworldMaps = {
               },
               {
                 type: "textMessage",
-                text: "Player: Hey there, Sirap Bandung is a mixture of rose syrup and condensed milk. Although it looks like strawberry milk, it tastes completely different from it. You should try it since it has a unique taste!",
+                text: "Customer: Hey there, Sirap Bandung is a mixture of rose syrup and condensed milk.",
+                faceHero: "customerBRight",
+              },
+              {
+                type: "textMessage",
+                text: "Customer: Although it looks like strawberry milk, it tastes completely different from it.",
+                faceHero: "customerBRight",
+              },
+              {
+                type: "textMessage",
+                text: "Customer: You should try it since it has a unique taste!",
                 faceHero: "customerBRight",
               },
               {
@@ -250,17 +265,17 @@ window.OverworldMaps = {
               },
               {
                 type: "textMessage",
-                text: "Customer: Of course, although it originated from Hong Kong, Taiwan, and Southern China, it is often used as a topping for Malaysian desserts, or added to other beverages such as soy milk, iced teh tarik, and sirap bandung. Alternatively, it can be served on its own with some sugar syrup, as ‘iced cincau’. You can even find cincau drinks sold in cans in a vending machine.",
+                text: "Customer: Of course, although it originated from Hong Kong, Taiwan, and Southern China, it is often used as a topping for Malaysian desserts, or added to other beverages such as soy milk, iced teh tarik, and sirap bandung. ",
+                faceHero: "customerC",
+              },
+              {
+                type: "textMessage",
+                text: "Customer: Alternatively, it can be served on its own with some sugar syrup, as ‘iced cincau’. You can even find cincau drinks sold in cans in a vending machine.",
                 faceHero: "customerC",
               },
               {
                 type: "textMessage",
                 text: "Player: It sounds like a must-try drink! Thanks :)",
-                faceHero: "customerC",
-              },
-              {
-                type: "textMessage",
-                text: "Customer: The leaves and stalks of this plant are dried and boiled with a small amount of starch or rice flour. After cooling down, the liquid will firm into a jelly-like consistency.",
                 faceHero: "customerC",
               },
             ],
@@ -292,12 +307,12 @@ window.OverworldMaps = {
               },
               {
                 type: "textMessage",
-                text: "Customer: Haha, please do not think of images of cat eyes floating in the brown liquid. It is made up of monk fruit which is also known as “Lo Hon Guo'' in Chinese.",
+                text: 'Customer: Haha, please do not think of images of cat eyes floating in the brown liquid. It is made up of monk fruit which is also known as "Lo Hon Guo" in Chinese.',
                 faceHero: "customerD",
               },
               {
                 type: "textMessage",
-                text: "Customer:  The abundant benefits of monk fruit are widely known in the world of traditional Chinese medicine.",
+                text: "Customer: The abundant benefits of monk fruit are widely known in the world of traditional Chinese medicine.",
                 faceHero: "customerD",
               },
               {
@@ -307,7 +322,12 @@ window.OverworldMaps = {
               },
               {
                 type: "textMessage",
-                text: "Customer: Researchers claim that the fruit can help relieve depression, prevent cell damage, and act as an anti-ageing agent. This drink can be usually found at Petaling Street and night markets so I am surprised to see it being sold here.",
+                text: "Customer: Researchers claim that the fruit can help relieve depression, prevent cell damage, and act as an anti-ageing agent.",
+                faceHero: "customerD",
+              },
+              {
+                type: "textMessage",
+                text: "Customer: This drink can be usually found at Petaling Street and night markets so I am surprised to see it being sold here.",
                 faceHero: "customerD",
               },
               {
@@ -414,7 +434,12 @@ window.OverworldMaps = {
               },
               {
                 type: "textMessage",
-                text: "Employee: ‘Tuak’ is a rice wine that is made of four basic ingredients, which is cooked glutinous rice, ragi(a traditional starter base containing bacterial enzymes and yeast), water and sugar which is optional. Some ‘Tuak’ also may include honey to give it a mead-like flavor.",
+                text: "Employee: ‘Tuak’ is a rice wine that is made of four basic ingredients, which is cooked glutinous rice, ragi(a traditional starter base containing bacterial enzymes and yeast), water and sugar which is optional. ",
+                faceHero: "employeeH",
+              },
+              {
+                type: "textMessage",
+                text: "Employee: Some ‘Tuak’ also may include honey to give it a mead-like flavor. ",
                 faceHero: "employeeH",
               },
               {
@@ -466,7 +491,12 @@ window.OverworldMaps = {
               },
               {
                 type: "textMessage",
-                text: "Employee: No, it’s different. The word ‘white’ in white coffee means unadulterated or pure. This refers to the brewing process, in which the coffee beans are brewed without any added substances or ingredients.",
+                text: "Employee: No, it’s different. The word ‘white’ in white coffee means unadulterated or pure. ",
+                faceHero: "employeeG",
+              },
+              {
+                type: "textMessage",
+                text: "Employee: This refers to the brewing process, in which the coffee beans are brewed without any added substances or ingredients.",
                 faceHero: "employeeG",
               },
               {
@@ -508,7 +538,12 @@ window.OverworldMaps = {
               },
               {
                 type: "textMessage",
-                text: "Employee: Well if you could make stout out of it, why not make a juice too? but this barley drink didn't taste anything like its alcoholic counterpart. It is sweet, slightly thick and comes with soft barley pearls and can be served warm or cold, plain or with lime.",
+                text: "Employee: Well if you could make stout out of it, why not make a juice too? but this barley drink didn't taste anything like its alcoholic counterpart.",
+                faceHero: "employeeF",
+              },
+              {
+                type: "textMessage",
+                text: "Employee: It is sweet, slightly thick and comes with soft barley pearls and can be served warm or cold, plain or with lime.",
                 faceHero: "employeeF",
               },
               {
@@ -518,7 +553,12 @@ window.OverworldMaps = {
               },
               {
                 type: "textMessage",
-                text: "Employee: It is thought to have a cooling effect on the body and is often used as a home remedy for fever. Also, drinking barley water on a regular basis can help promote weight loss, and lower cholesterol and blood sugar levels.",
+                text: "Employee: It is thought to have a cooling effect on the body and is often used as a home remedy for fever.",
+                faceHero: "employeeF",
+              },
+              {
+                type: "textMessage",
+                text: "Employee: Also, drinking barley water on a regular basis can help promote weight loss, and lower cholesterol and blood sugar levels.",
                 faceHero: "employeeF",
               },
               {
@@ -794,6 +834,23 @@ window.OverworldMaps = {
       [utils.asGridCoords(13, 19)]: true,
       [utils.asGridCoords(14, 19)]: true,
       [utils.asGridCoords(15, 19)]: true,
+    },
+    cutsceneSpaces: {
+      [utils.asGridCoords(20, 13)]: [
+        {
+          events: [
+            {
+              who: "hero",
+              type: "stand",
+              direction: "down",
+            },
+            {
+              type: "textMessage",
+              text: "Sippssss... ah, yummy!",
+            },
+          ],
+        },
+      ],
     },
   },
 };
