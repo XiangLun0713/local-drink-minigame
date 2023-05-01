@@ -5,7 +5,7 @@ Welcome to the Local Drinkie repository! <br/><br/>
 Local Drinkie is a minigame website that introduces local drinks from Malaysia to players. The game is set in a coffee shop themed map, where the player controls a character to interact with NPCs and learn about local drinks.
 
 ## Getting Started
-To get started, simply visit the <a href="https://xianglun.me/local-drink-minigame/">Local Drinkie minigame website<a/> and begin playing the game. The game is built using vanilla JavaScript, HTML, and CSS, so no additional downloads or installations are required.
+To get started, simply visit the <a href="https://xianglun0713.github.io/local-drink-minigame/">Local Drinkie minigame website<a/> and begin playing the game. The game is built using vanilla JavaScript, HTML, and CSS, so no additional downloads or installations are required.
 
 ## How to Play
 In Local Drinkie, the player controls a character who can move around the coffee shop themed map and interact with NPCs. To interact with an NPC, the player simply needs to walk up to them and press the "enter" button on their keyboard. This will initiate a conversation with the NPC, during which the player can learn about various local drinks.
